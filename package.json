@@ -1,0 +1,20 @@
+{
+  "name": "dvdsearch_stylus",
+  "version": "1.0.0",
+  "description": "demo stylus for searching dvd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "stylus",
+    "gulp"
+  ],
+  "author": "calvimor",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-stylus": "^2.6.0"
+  }
+}
