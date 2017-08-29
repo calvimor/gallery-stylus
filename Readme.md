@@ -5,8 +5,6 @@
 
 ```npm install gulp gulp-stylus browser-sync --save-dev```
 
-Paste files from M3 02 index, gulpfile and images folder
-
 create css folder and stylus folder with main.styl file
 
 then
