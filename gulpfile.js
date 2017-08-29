@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var browserSync = require('browser-sync').create();
+var autoprefixer = require('gulp-autoprefixer');
+
 
 gulp.task('serve', ['stylus'], function() {
 
@@ -14,7 +16,10 @@ gulp.task('serve', ['stylus'], function() {
 
 gulp.task('stylus', function() {
     return gulp.src('./stylus/main.styl')
-        .pipe(stylus())
+        .pipe(stylus({
+            compress: true
+        }))
+        .pipe(autoprefixer())
         .pipe(gulp.dest('./css'))
         .pipe(browserSync.stream());
 });
