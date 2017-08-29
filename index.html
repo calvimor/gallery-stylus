@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>DVD Search</title>
@@ -11,7 +12,12 @@
 
   <link rel="stylesheet" href="/node_modules/foundation-sites/dist/css/foundation.min.css">
 
+  <script src="/node_modules/chart.js/dist/Chart.js">
+
+  </script>
+
 </head>
+
 <body>
 
   <div class="row">
@@ -26,7 +32,7 @@
       <div class="row pad">
         <div class="columns">
           <h1>Hollywood Titles</h1>
-          <p class="subtitle">Latest releases</p>          
+          <p class="subtitle">Latest releases</p>
         </div>
         <div class="columns">
           <a href="#" class="btn" id="view-all">View all releases</a>
@@ -47,7 +53,53 @@
         <img src="images/thumb.jpg" alt="">
         <img src="images/thumb.jpg" alt="">
       </div>
+
+      <div class="row pad">
+        <div class="small-6 columns">
+          <h2>New DVD Releases</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa atque velit natus libero, incidunt, id sed tempora
+            quidem eveniet quasi aliquam amet debitis laborum ex accusantium, esse minus hic architecto!</p>
+        </div>
+        <div class="small-6 columns">
+          <h3>DVD Releases by week</h3>
+
+          <canvas id="myChart" width="400" height="250"></canvas>
+        </div>
+      </div>
     </div>
   </div>
+  <script>
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["5/01", "5/08", "5/16", "5/24", "6/02", "5/10"],
+        datasets: [{
+          label: '# of releases',
+          data: [12, 19, 3, 5, 2, 3],
+
+          borderColor: [
+            '#67d2f4'
+          ],
+          borderWidth: 3
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            gridLines: {
+              display: false
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              display: false
+            }
+          }]
+        }
+      }
+    });
+  </script>
 </body>
+
 </html>

@@ -19,3 +19,6 @@ include foundation reference in index.html
 Then add this font family from google
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400">
+
+
+```npm install chart.js --save```
